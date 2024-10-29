@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.2-alpha.1](https://github.com/thomvaill/log4brains/compare/v1.0.2-alpha.0...v1.0.2-alpha.1) (2024-10-29)
+
+
+### Bug Fixes
+
+* lerna publish on Node 18-20 ([0e78d47](https://github.com/thomvaill/log4brains/commit/0e78d473fed1b98be395e072f1193436858869f9))
+
+
+
+
+
 ## [1.0.2-alpha.0](https://github.com/thomvaill/log4brains/compare/v1.0.1...v1.0.2-alpha.0) (2024-10-29)
 
 
