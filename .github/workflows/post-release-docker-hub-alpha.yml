@@ -20,7 +20,4 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: build and release the latest alpha Docker image
-        run: |
-          make -C docker release version-tag
-          docker image tag "thomvaill/log4brains:$(make -C docker print-utag)" thomvaill/log4brains:alpha
-          docker image push thomvaill/log4brains:alpha
+        run: MDF_BRANCH_TAG=alpha make -C docker release version-tag branch-tag
