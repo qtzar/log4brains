@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.2-alpha.0](https://github.com/thomvaill/log4brains/compare/v1.0.1...v1.0.2-alpha.0) (2024-10-29)
+
+
+### Bug Fixes
+
+* make Log4brains run on Node 18 and 20 ([58dcfff](https://github.com/thomvaill/log4brains/commit/58dcfffd7ceb706bef6d43838be5d0358ed0f51f))
+* workaround for ERR_OSSL_EVP_UNSUPPORTED build issue ([#114](https://github.com/thomvaill/log4brains/issues/114)) ([8e93409](https://github.com/thomvaill/log4brains/commit/8e93409d95777d3036ad809982aa70a9f26d8dd6))
+
+
+
+
+
 ## [1.0.1](https://github.com/thomvaill/log4brains/compare/v1.0.0...v1.0.1) (2022-09-22)
 
 
