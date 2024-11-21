@@ -20,7 +20,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
-        node-version: ${{ fromJson(needs.load-supported-versions.outputs.node_versions) }}
+        node-version: ${{ fromJson(needs.load-nodejs-supported-versions.outputs.node_versions) }}
     uses: ./.github/workflows/reusable-e2e-tests.yml
     with:
       npm-package-fullname: log4brains # stable version

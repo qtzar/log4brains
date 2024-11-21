@@ -28,7 +28,7 @@ jobs:
     needs: load-nodejs-supported-versions
     strategy:
       matrix:
-        node-version: ${{ fromJson(needs.load-supported-versions.outputs.node_versions) }}
+        node-version: ${{ fromJson(needs.load-nodejs-supported-versions.outputs.node_versions) }}
     uses: ./.github/workflows/reusable-tests.yml
     with:
       os: ubuntu-latest
