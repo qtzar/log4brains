@@ -24,4 +24,4 @@ jobs:
         id: get-versions
         run: |
           node_versions="$(cat .github/supported_nodejs_versions.json | jq -r '.versions | @json')"
-          echo "::set-output name=node_versions::${node_versions}"
+          echo "node_versions=${node_versions}" >> "${GITHUB_OUTPUT}"

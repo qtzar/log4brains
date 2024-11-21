@@ -24,4 +24,4 @@ jobs:
         id: get-version
         run: |
           version="$(cat lerna.json | jq -r .version)"
-          echo "::set-output name=version::${version}"
+          echo "version=${version}" >> "${GITHUB_OUTPUT}"
