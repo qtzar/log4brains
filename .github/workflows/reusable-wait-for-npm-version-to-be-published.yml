@@ -21,5 +21,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            scripts/wait-for-npm-version-to-be-published.sh
+          sparse-checkout-cone-mode: false
       - name: Wait
         run: ./scripts/wait-for-npm-version-to-be-published.sh "${{ inputs.npm-package }}" "${{ inputs.npm-version }}" "${{ inputs.wait-minutes }}"

@@ -15,8 +15,13 @@ jobs:
     outputs:
       version: ${{ steps.get-version.outputs.version }}
     steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            lerna.json
+          sparse-checkout-cone-mode: false
       - name: Get log4brains version from lerna.json
         id: get-version
         run: |
           version="$(cat lerna.json | jq -r .version)"
-          echo "::set-output name=version::$version"
+          echo "::set-output name=version::${version}"
