@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0-alpha.0](https://github.com/thomvaill/log4brains/compare/v1.0.2-alpha.4...v1.1.0-alpha.0) (2024-12-14)
+
+
+### Bug Fixes
+
+* perform recursive workdir detection in web cli too ([98c1046](https://github.com/thomvaill/log4brains/commit/98c104615966bbc156850daaf2ad9f633ce434de))
+* remove esm dependency from global-cli ([254c82f](https://github.com/thomvaill/log4brains/commit/254c82f058231020b8bfbc8b3d4b446020f3f698))
+
+
+### Features
+
+* support Node.js 22 ([f7781b6](https://github.com/thomvaill/log4brains/commit/f7781b6b78e526d793183f6253ec4282245e10cd))
+
+
+
+
+
 ## [1.0.2-alpha.4](https://github.com/thomvaill/log4brains/compare/v1.0.2-alpha.3...v1.0.2-alpha.4) (2024-11-21)
 
 **Note:** Version bump only for package root
