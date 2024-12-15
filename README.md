@@ -218,7 +218,7 @@ It will be re-built and published every time you push on `main`.
 Create your `.gitlab-ci.yml` and adapt it to your case:
 
 ```yml
-image: node:14-alpine3.12
+image: node:lts-alpine
 pages:
   stage: deploy
   variables:
