@@ -48,7 +48,8 @@ module.exports = withBundleAnalyzer({
   typescript: {
     // We check typescript errors only during the first build, not during "log4brains build",
     // for performance purpose and to avoid importing @types/* packages as dependencies
-    // #NEXTJS-HACK Exception: @types/node is required because of the Next.js verifyTypeScriptSetup() pre-checks
+    // #NEXTJS-HACK Exception: typescript, @types/react and @types/node are required because of the Next.js verifyTypeScriptSetup() pre-checks
+    // TODO: in the future, try to compile the Next.js app to JS during the build phase to avoid depending on typescript dependencies at the runtime
     ignoreBuildErrors: process.env.LOG4BRAINS_PHASE !== "initial-build"
   }
 });
