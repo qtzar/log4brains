@@ -38,7 +38,7 @@ jobs:
           node-version: ${{ inputs.node-version }}
           cache: yarn
           cache-dependency-path: yarn.lock
-      - run: yarn install --frozen-lockfile
+      - run: yarn install --frozen-lockfile --network-timeout 100000 # custom network-timeout for Windows runners
 
       - name: Check for yarn.lock changes
         id: yarn-lock
@@ -66,5 +66,5 @@ jobs:
           yarn link-cli
           echo "$(yarn global bin)" >> $GITHUB_PATH
           rm -rf node_modules
-          yarn install --production --no-lockfile
+          yarn install --production --no-lockfile --network-timeout 100000
           yarn e2e
