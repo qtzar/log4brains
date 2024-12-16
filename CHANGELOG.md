@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0-alpha.2](https://github.com/thomvaill/log4brains/compare/v1.1.0-alpha.1...v1.1.0-alpha.2) (2024-12-16)
+
+
+### Bug Fixes
+
+* ts types for nextjs 2nd try ([056a1a4](https://github.com/thomvaill/log4brains/commit/056a1a40c1088eecd5559151253525c823b6271b))
+
+
+
+
+
 # [1.1.0-alpha.1](https://github.com/thomvaill/log4brains/compare/v1.1.0-alpha.0...v1.1.0-alpha.1) (2024-12-15)
 
 
