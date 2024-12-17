@@ -5,10 +5,17 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # [1.1.0](https://github.com/thomvaill/log4brains/compare/v1.1.0-alpha.4...v1.1.0) (2024-12-17)
 
-**Note:** Version bump only for package root
+### Bug Fixes
 
+* make Log4brains run on Node 18 and 20 ([58dcfff](https://github.com/thomvaill/log4brains/commit/58dcfffd7ceb706bef6d43838be5d0358ed0f51f))
+* workaround for ERR_OSSL_EVP_UNSUPPORTED build issue ([#114](https://github.com/thomvaill/log4brains/issues/114)) ([8e93409](https://github.com/thomvaill/log4brains/commit/8e93409d95777d3036ad809982aa70a9f26d8dd6))
+* perform recursive workdir detection in web cli too ([98c1046](https://github.com/thomvaill/log4brains/commit/98c104615966bbc156850daaf2ad9f633ce434de))
+* remove esm dependency from global-cli ([254c82f](https://github.com/thomvaill/log4brains/commit/254c82f058231020b8bfbc8b3d4b446020f3f698))
 
+### Features
 
+* alpha releases ([3a083c4](https://github.com/thomvaill/log4brains/commit/3a083c45f0bf54647c2b03c206ac38adf11022f2))
+* support Node.js 22 ([f7781b6](https://github.com/thomvaill/log4brains/commit/f7781b6b78e526d793183f6253ec4282245e10cd))
 
 
 # [1.1.0-alpha.4](https://github.com/thomvaill/log4brains/compare/v1.1.0-alpha.3...v1.1.0-alpha.4) (2024-12-17)

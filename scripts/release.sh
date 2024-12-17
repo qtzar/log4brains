@@ -41,3 +41,4 @@ yarn lerna publish \
 echo ""
 echo "Done!"
 echo "Please now monitor the Post-Release actions: https://github.com/thomvaill/log4brains/actions"
+echo "And don't forget to edit CHANGELOG.md and the Github release to write a clean changelog of this release"
