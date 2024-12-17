@@ -55,7 +55,9 @@ jobs:
       experimental: true # best effort mode
 
   publish-adr:
-    needs: e2e-tests
+    needs:
+      - get-log4brains-version
+      - e2e-tests
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -68,7 +70,7 @@ jobs:
           node-version-file: .nvmrc # current LTS
       - name: Install and Build Log4brains
         run: |
-          npm install -g log4brains
+          npm install -g log4brains@${{ needs.get-log4brains-version.outputs.version }}
           log4brains build --basePath /${GITHUB_REPOSITORY#*/}/adr
       - name: Publish to Github pages
         uses: JamesIves/github-pages-deploy-action@3.7.1
