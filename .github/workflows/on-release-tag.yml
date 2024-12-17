@@ -54,6 +54,29 @@ jobs:
       node-version: current
       experimental: true # best effort mode
 
+  docker-build-and-push:
+    needs: e2e-tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Build and push the latest alpha Docker image
+        working-directory: ./docker
+        run: |
+          echo "Log4brains version: "
+          make print-version-tag
+          if make print-version-tag | grep alpha &> /dev/null
+          then
+            echo "Pushing an alpha release..."
+            MDF_BRANCH_TAG=alpha make release version-tag branch-tag
+          else
+            echo "Pushing a stable release..."
+            make release version-tag latest-tag
+          fi
+
   publish-adr:
     needs:
       - get-log4brains-version

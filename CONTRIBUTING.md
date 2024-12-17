@@ -105,7 +105,7 @@ Log4brains follows a **simplified Git Flow** model. Here’s how the process wor
 
    This helps us get feedback from early adopters before triggering a stable release.
 
-7. **Stable Release**: Once the `develop` branch is stable and tested, the maintainers will manually run `scripts/release.sh` + `make -C docker release version-tag branch-tag latest-tag` to publish a new stable release to npm (TODO: should be automated in the future).
+7. **Stable Release**: Once the `develop` branch is stable and tested, the maintainers will manually run `scripts/release.sh` to publish a new stable release to npm (TODO: should be automated in the future).
 
 ## License
 
