@@ -53,3 +53,27 @@ jobs:
       os: ${{ matrix.os }}
       node-version: current
       experimental: true # best effort mode
+
+  publish-adr:
+    needs: e2e-tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false # required by JamesIves/github-pages-deploy-action
+          fetch-depth: 0 # required by Log4brains to work correctly (needs the whole Git history)
+      # We don't use cache here so we really test a fresh install
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc # current LTS
+      - name: Install and Build Log4brains
+        run: |
+          npm install -g log4brains
+          log4brains build --basePath /${GITHUB_REPOSITORY#*/}/adr
+      - name: Publish to Github pages
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: .log4brains/out
+          TARGET_FOLDER: adr

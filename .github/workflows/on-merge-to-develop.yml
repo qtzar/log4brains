@@ -50,42 +50,11 @@ jobs:
       node-version: current
       experimental: true # best effort mode
 
-  publish-pages:
+  release-alpha:
     needs:
       - quality-checks
       - tests-per-nodejs-version
       - tests-LTS-per-other-os
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          persist-credentials: false # required by JamesIves/github-pages-deploy-action
-          fetch-depth: 0 # required by Log4brains to work correctly (needs the whole Git history)
-      - uses: actions/setup-node@v4
-        with:
-          node-version-file: .nvmrc # current LTS
-          cache: yarn
-          cache-dependency-path: yarn.lock
-      - run: yarn install --frozen-lockfile
-      - name: Build and link
-        run: |
-          yarn build
-          yarn link-cli
-          echo "$(yarn global bin)" >> $GITHUB_PATH
-      - name: Log4brains build
-        env:
-          HIDE_LOG4BRAINS_VERSION: "1" # TODO: use lerna to bump the version temporarily here so we don't have to hide it
-        run: log4brains build --basePath /${GITHUB_REPOSITORY#*/}/adr
-      - name: Publish to Github pages
-        uses: JamesIves/github-pages-deploy-action@3.7.1
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: .log4brains/out
-          TARGET_FOLDER: adr
-
-  release-alpha:
-    needs: publish-pages # we could perform this step in parallel but this acts as a last end-to-end test before releasing
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
