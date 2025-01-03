@@ -3,6 +3,39 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0-alpha.0 (2025-01-03)
+
+
+### Bug Fixes
+
+* **init:** bad import ([e3b74be](https://github.com/thomvaill/log4brains/commit/e3b74be05964f8668610397cb62c15d519e581a3))
+* **init:** sed behavior on macOS ([132ef7c](https://github.com/thomvaill/log4brains/commit/132ef7caad3eb3ab0b1b5cdd1d873f40dcae0ca7))
+* **init:** typo ([de0c04c](https://github.com/thomvaill/log4brains/commit/de0c04c3bc0e13bf5723af26db43ab5dd2a68365))
+* **init:** Typo in ADR template link ([c1629a4](https://github.com/thomvaill/log4brains/commit/c1629a4a692414642667749112b28943dedb3bd4))
+* **init:** use yesterday's date to create first ADRs ([d5783c8](https://github.com/thomvaill/log4brains/commit/d5783c8f695d257d93a4b6fdbdc309892b4d7352))
+* make Log4brains run on Node 18 and 20 ([58dcfff](https://github.com/thomvaill/log4brains/commit/58dcfffd7ceb706bef6d43838be5d0358ed0f51f))
+
+
+### Features
+
+* distribute as a global NPM package ([9551b68](https://github.com/thomvaill/log4brains/commit/9551b689ffbce82f5b6d2bb514f87bf3faa10e3e))
+* initial features ([03550dc](https://github.com/thomvaill/log4brains/commit/03550dc4435c7668d36b50ca5ae420fab94e4936))
+
+
+### Reverts
+
+* Revert "chore(release): publish v1.0.0" ([7f9852e](https://github.com/thomvaill/log4brains/commit/7f9852ea48842aae3d45ac7466a829532a2fb3ce))
+* Revert "chore(release): publish v1.0.0" ([d89af64](https://github.com/thomvaill/log4brains/commit/d89af64b03d8eabbb5b660ba77eea800f991aa37))
+
+
+### BREAKING CHANGES
+
+* installation procedure is now completely modified
+
+
+
+
+
 # [1.1.0](https://github.com/thomvaill/log4brains/compare/v1.1.0-alpha.4...v1.1.0) (2024-12-17)
 
 **Note:** Version bump only for package @log4brains/init

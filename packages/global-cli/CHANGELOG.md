@@ -3,6 +3,35 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0-alpha.0 (2025-01-03)
+
+
+### Bug Fixes
+
+* make Log4brains run on Node 18 and 20 ([58dcfff](https://github.com/thomvaill/log4brains/commit/58dcfffd7ceb706bef6d43838be5d0358ed0f51f))
+* perform recursive workdir detection in web cli too ([98c1046](https://github.com/thomvaill/log4brains/commit/98c104615966bbc156850daaf2ad9f633ce434de))
+* remove esm dependency from global-cli ([254c82f](https://github.com/thomvaill/log4brains/commit/254c82f058231020b8bfbc8b3d4b446020f3f698))
+
+
+### Features
+
+* distribute as a global NPM package ([9551b68](https://github.com/thomvaill/log4brains/commit/9551b689ffbce82f5b6d2bb514f87bf3faa10e3e))
+
+
+### Reverts
+
+* Revert "chore(release): publish v1.0.0" ([7f9852e](https://github.com/thomvaill/log4brains/commit/7f9852ea48842aae3d45ac7466a829532a2fb3ce))
+* Revert "chore(release): publish v1.0.0" ([d89af64](https://github.com/thomvaill/log4brains/commit/d89af64b03d8eabbb5b660ba77eea800f991aa37))
+
+
+### BREAKING CHANGES
+
+* installation procedure is now completely modified
+
+
+
+
+
 # [1.1.0](https://github.com/thomvaill/log4brains/compare/v1.1.0-alpha.4...v1.1.0) (2024-12-17)
 
 **Note:** Version bump only for package log4brains
